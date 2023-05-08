@@ -12,8 +12,8 @@ import skimage.io as io
 import torch
 
 import torchvision
-from silk.lib.backbones.silk.silk import SiLKVGG as SiLK
-from silk.lib.backbones.superpoint.vgg import ParametricVGG
+from silk.backbones.silk.silk import SiLKVGG as SiLK
+from silk.backbones.superpoint.vgg import ParametricVGG
 
 from silk.config.model import load_model_from_checkpoint
 from silk.models.silk import matcher
