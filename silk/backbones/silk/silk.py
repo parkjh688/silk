@@ -10,21 +10,21 @@ from typing import Iterable, Tuple, Union
 import torch
 import torch.nn as nn
 
-from lib.backbones.abstract.shared_backbone_multiple_heads import (
+from silk.backbones.abstract.shared_backbone_multiple_heads import (
     SharedBackboneMultipleHeads,
 )
-from lib.backbones.loftr.resnet_fpn import ResNetFPN_8_2
-from lib.backbones.superpoint.magicpoint import (
+from silk.backbones.loftr.resnet_fpn import ResNetFPN_8_2
+from silk.backbones.superpoint.magicpoint import (
     Backbone as VGGBackbone,
     DetectorHead as VGGDetectorHead,
     MagicPoint,
 )
-from lib.backbones.superpoint.superpoint import (
+from silk.backbones.superpoint.superpoint import (
     DescriptorHead as VGGDescriptorHead,
     SuperPoint,
 )
-from lib.flow import AutoForward, Flow
-from lib.models.superpoint_utils import get_dense_positions
+from silk.flow import AutoForward, Flow
+from silk.models.superpoint_utils import get_dense_positions
 
 
 def from_feature_coords_to_image_coords(model, desc_positions):
